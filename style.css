@@ -32,8 +32,8 @@ header {
   background: linear-gradient(135deg, #6c757d, #495057);
   color: white;
   text-align: center;
-  padding: 40px 0; /* Increased padding for a more spacious feel */
-  position: relative; /* For parallax effect */
+  padding: 60px 0; /* Spacious feel */
+  position: relative;
   overflow: hidden; /* Prevent overflow from animations */
 }
 
@@ -46,48 +46,72 @@ header::before {
   bottom: 0;
   background: rgba(255, 255, 255, 0.1); /* Light overlay for depth */
   z-index: 1;
+  pointer-events: none; /* Allow hover interactions on elements above */
   animation: pulse 4s infinite; /* Background pulse effect */
 }
 
+header .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above the background */
+}
+
 header .logo {
-  width: 120px; /* Slightly larger logo */
+  width: 120px;
   margin-bottom: 20px;
-  z-index: 2; /* Ensure logo is above background */
+  z-index: 3;
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 header h1 {
-  z-index: 2; /* Ensure title is above background */
+  font-size: 3rem;
+  color: white;
+  z-index: 3;
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 header p {
-  z-index: 2; /* Ensure paragraph is above background */
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  z-index: 3;
+}
+
+header .header-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  width: 80%;
+  height: auto;
+  opacity: 0.4; /* Semi-transparent */
+  z-index: 1;
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
 }
 
 /* Hover Effects */
 header .logo:hover {
-  transform: scale(1.1); /* Slightly scale logo on hover */
+  transform: scale(3.2); /* Slightly scale logo on hover */
+}
+header .social-links:hover {
+  transform: scale(1.2); /* Slightly scale logo on hover */
 }
 
 header h1:hover {
-  transform: translateY(-5px); /* Slightly lift title on hover */
+  transform: translateY(-10px); /* Slightly lift title on hover */
 }
-
 /* Keyframes for pulse animation */
 @keyframes pulse {
   0% {
-      opacity: 0.1;
+    opacity: 0.1;
   }
   50% {
-      opacity: 0.3;
+    opacity: 0.3;
   }
   100% {
-      opacity: 0.1;
+    opacity: 0.1;
   }
 }
 
-/* Navigation */
+/* Navigation Styles */
 nav {
   background-color: #495057; /* Darker navigation background */
 }
@@ -177,7 +201,7 @@ nav ul li a:hover {
   background: #343a40;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   background: #495057; /* Match footer with navigation */
   color: white;

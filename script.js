@@ -10,24 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
         description: "A Python-based app that fetches stock prices detail using an API.",
         link: "https://github.com/DeMoN-7/Stock-Price-Tracker-using-Python",
       },
-      
+      {
+        name: "Precision Click Game",
+        description: "A Python-based game where you click on a moving target to score points. It tests your precision and speed.",
+        link: "https://github.com/DeMoN-7/Precision-Click-Game",
+    },
+    {
+      name: "Simple Calculator",
+      description: "A basic calculator app built using Python and Tkinter for performing arithmetic operations.",
+      link: "https://github.com/DeMoN-7/Simple-GUI-Calculator",
+  },
+  
+  
+    
     ];
   
-    const classworks = [
-      {
-        name: "Java Data Structures",
-        description: "Programs on data structures using Java.",
-        link: "https://github.com/DeMoN-7/Data-Structures-Java",
-      },
-    ];
+    
   
-    const assignments = [
-      {
-        name: "Birth-Death Simulation",
-        description: "Simulating the birth-death process using Python.",
-        link: "#",
-      },
-    ];
+   
   
     function populateSection(sectionId, data) {
       const section = document.getElementById(sectionId);
