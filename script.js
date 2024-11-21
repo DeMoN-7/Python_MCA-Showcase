@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         link: "https://github.com/DeMoN-7/Weather-Forecasting-Using-Python",
       },
       {
-        name: "Iris Flower Classification",
-        description: "A machine learning project for classifying iris flowers.",
-        link: "https://github.com/DeMoN-7/Iris-Flower-Classification",
+        name: "Stock Price Tracker",
+        description: "A Python-based app that fetches stock prices detail using an API.",
+        link: "https://github.com/DeMoN-7/Stock-Price-Tracker-using-Python",
       },
+      
     ];
   
     const classworks = [

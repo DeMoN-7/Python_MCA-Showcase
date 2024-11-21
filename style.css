@@ -135,10 +135,13 @@ nav ul li a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(33% - 20px);
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the button is at the bottom */
 }
 
 .card:hover {
-  transform: translateY(- 10px);
+  transform: translateY(-10px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -159,7 +162,6 @@ nav ul li a:hover {
 }
 
 .card a {
-  display: block;
   padding: 15px;
   text-align: center;
   background: #495057;
@@ -168,6 +170,7 @@ nav ul li a:hover {
   font-weight: 600;
   border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
   transition: background 0.3s ease;
+  margin-top: auto; /* Ensures the button is at the bottom */
 }
 
 .card a:hover {
