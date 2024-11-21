@@ -1,144 +1,193 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background-color: #f8f9fa;
-    color: #212529;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #eef2f3; /* Light background for a softer look */
+  color: #212529;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #343a40;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+  text-align: center;
+  padding: 40px 0; /* Increased padding for a more spacious feel */
+  position: relative; /* For parallax effect */
+  overflow: hidden; /* Prevent overflow from animations */
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1); /* Light overlay for depth */
+  z-index: 1;
+  animation: pulse 4s infinite; /* Background pulse effect */
+}
+
+header .logo {
+  width: 120px; /* Slightly larger logo */
+  margin-bottom: 20px;
+  z-index: 2; /* Ensure logo is above background */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+header h1 {
+  z-index: 2; /* Ensure title is above background */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+header p {
+  z-index: 2; /* Ensure paragraph is above background */
+}
+
+/* Hover Effects */
+header .logo:hover {
+  transform: scale(1.1); /* Slightly scale logo on hover */
+}
+
+header h1:hover {
+  transform: translateY(-5px); /* Slightly lift title on hover */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+      opacity: 0.1;
   }
-  
-  h1, h2 {
-    font-weight: 600;
-    color: #343a40;
+  50% {
+      opacity: 0.3;
   }
-  
-  h1 {
-    font-size: 2.5rem;
+  100% {
+      opacity: 0.1;
   }
-  
-  p {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Header Styles */
-  header {
-    background: linear-gradient(135deg, #6c757d, #343a40);
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-  }
-  
-  header .logo {
-    width: 100px;
-    margin-bottom: 20px;
-  }
-  
-  /* Navigation */
-  nav {
-    background-color: #343a40;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    list-style: none;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-    padding: 5px 15px;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #495057;
-  }
-  
-  /* Card Styles */
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33% - 20px);
-    max-width: 300px;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card h3 {
-    background: #343a40;
-    color: white;
-    padding: 15px;
-    margin: 0;
-    font-size: 1.25rem;
-  }
-  
-  .card p {
-    padding: 15px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #6c757d;
-  }
-  
-  .card a {
-    display: block;
-    padding: 15px;
-    text-align: center;
-    background: #495057;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 0 0 8px 8px;
-    transition: background 0.3s ease;
-  }
-  
-  .card a:hover {
-    background: #343a40;
-  }
-  
-  /* Footer */
-  footer {
-    background: #343a40;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-  }
-  
-  footer a {
-    color: #adb5bd;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+/* Navigation */
+nav {
+  background-color: #495057; /* Darker navigation background */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0; /* Increased padding for a more spacious feel */
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 20px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 8px 20px; /* Increased padding for button-like appearance */
+  border-radius: 20px; /* Rounded corners for links */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #6c757d; /* Subtle hover effect */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Card Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33% - 20px);
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(- 10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  background: linear-gradient(135deg, #495057, #6c757d);
+  color: white;
+  padding: 15px;
+  margin: 0;
+  font-size: 1.25rem;
+  text-align: center; /* Center align title */
+}
+
+.card p {
+  padding: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+.card a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  background: #495057;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 12px 12px; /* Rounded corners at the bottom */
+  transition: background 0.3s ease;
+}
+
+.card a:hover {
+  background: #343a40;
+}
+
+/* Footer */
+footer {
+  background: #495057; /* Match footer with navigation */
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increased padding for a more spacious feel */
+  margin-top: 30px;
+}
+
+footer a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
