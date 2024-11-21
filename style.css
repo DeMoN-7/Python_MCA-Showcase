@@ -194,3 +194,48 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 0; /* Reduced padding for smaller screens */
+  }
+
+  header .logo {
+    width: 100px; /* Smaller logo on mobile */
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller font for header on mobile */
+  }
+
+  .card-container {
+    justify-content: center;
+    gap: 15px; /* Adjust the gap between cards for smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Cards take up full width on mobile */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Adjusted margin for vertical layout */
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 20px); /* Cards take up 50% of the width on tablets */
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+}
